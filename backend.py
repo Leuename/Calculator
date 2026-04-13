@@ -1,17 +1,19 @@
 import sys
 from PySide6.QtWidgets import QApplication, QWidget, QPushButton, QLabel
 from frontend.calculator_ui import Calculator_ui
-from main import Calculator
-class Actions(Calculator.window):
+
+class Actions(Calculator_ui, QWidget):
     def __init__(self):
         super().__init__()
+        self.setupUi(self)
         self.one_button.clicked.connect(self.one_button_action)
     
     def label(self):
-        pass
-    
+        display = []
+        
     def one_button_action(self):
-        label = self.display_label.setText("1")
+        listing =('1','2','3')
+        print(listing)
     
     def two_button_action(self):
         pass
